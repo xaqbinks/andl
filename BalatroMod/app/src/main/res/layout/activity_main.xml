@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/text_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome! Please prepare Balatro for modding."
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/btn_prepare_app"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Prepare Balatro for Modding" />
+
+    <Button
+        android:id="@+id/btn_launch_app"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Launch Balatro" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_config_speed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Game Speed Settings" />
+
+        <Button
+            android:id="@+id/btn_speed_up"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Up" />
+
+        <Button
+            android:id="@+id/btn_speed_down"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Down" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <Switch
+            android:id="@+id/switch_seed_mod"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enable Seeded Unlocks" />
+
+        <Button
+            android:id="@+id/btn_seed_up"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Up" />
+
+        <Button
+            android:id="@+id/btn_seed_down"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Down" />
+    </LinearLayout>
+
+</LinearLayout>
