@@ -52,12 +52,14 @@ public class MainActivity extends AppCompatActivity {
     private void setupModListeners() {
         SharedPreferences prefs = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
 
+        // Seeded Unlocks Mod Listener
         mSeedSwitch.setChecked(prefs.getBoolean("seeded_unlocks_enabled", false));
         mSeedSwitch.setOnCheckedChangeListener((buttonView, isChecked) -> {
             getSharedPreferences(PREFS_NAME, MODE_PRIVATE).edit().putBoolean("seeded_unlocks_enabled", isChecked).apply();
             ModManager.get().setModEnabled("seeded_unlocks", isChecked);
         });
 
+        // Load Order Listeners
         findViewById(R.id.btn_speed_up).setOnClickListener(v -> ModManager.get().moveModUp("speed_mod"));
         findViewById(R.id.btn_speed_down).setOnClickListener(v -> ModManager.get().moveModDown("speed_mod"));
         findViewById(R.id.btn_seed_up).setOnClickListener(v -> ModManager.get().moveModUp("seeded_unlocks"));
